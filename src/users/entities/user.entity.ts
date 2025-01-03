@@ -8,4 +8,10 @@ export class User implements PrismaUser {
 
   @Field()
   name: string;
+
+  @Field(() => Date)
+  createdAt: Date;
+
+  @Field(() => Date)
+  updatedAt: Date;
 }
