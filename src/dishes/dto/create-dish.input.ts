@@ -1,7 +1,16 @@
-import { InputType, Int, Field } from '@nestjs/graphql';
+import { InputType, Int, Field, Float } from '@nestjs/graphql';
 
 @InputType()
 export class CreateDishInput {
-  @Field(() => Int, { description: 'Example field (placeholder)' })
-  exampleField: number;
+  @Field()
+  name: string;
+
+  @Field({ nullable: true })
+  description: string;
+
+  @Field(() => Float, { nullable: true })
+  price: number;
+
+  @Field({ nullable: true })
+  imageUrl?: string;
 }
