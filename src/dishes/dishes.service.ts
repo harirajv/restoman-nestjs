@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateDishInput } from './dto/create-dish.input';
 import { UpdateDishInput } from './dto/update-dish.input';
-import { PrismaService } from 'src/prisma.service';
+import { PrismaService } from '../prisma.service';
 import { Dish } from './entities/dish.entity';
 
 @Injectable()
